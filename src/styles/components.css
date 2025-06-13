@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer components {
+  .shiny-text {
+    @apply text-transparent bg-clip-text font-bold inline-block;
+    background-image: linear-gradient(
+      60deg,
+      var(--color-oxford-blue) 40%,
+      var(--color-champagne) 50%,
+      var(--color-oxford-blue) 60%
+    );
+
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: shine 4s linear infinite;
+  }
+
+  .login-container {
+    @apply flex flex-col items-center relative w-[396px] h-[485px] backdrop-blur-sm bg-[var(--color-platinum)]/40 rounded-[50px] overflow-hidden shadow-lg p-8;
+  }
+  .login-title {
+    font-family: var(--font-roboto);
+  }
+  .login-input {
+    @apply w-full p-3 text-[var(--color-chinese-violet)] bg-[var(--color-frenchgray-light)]/40 rounded focus:outline-none 
+    focus:border-b-2 
+    focus:border-[var(--color-chinese-violet)] 
+    transition-colors duration-200;
+  }
+  
+}
+
+@layer utilities {
+  @keyframes shine {
+    0% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: -100% center;
+    }
+  }
+}

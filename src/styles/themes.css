@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-oxford-blue: #161b33;
+    --color-space-cadet: #2a2743;
+    --color-delft-blue: #454370;
+    --color-chinese-violet: #766484;
+    --color-rose-quartz: #bcacb9;
+    --color-frenchgray-light: #dad2da;
+    --color-frenchgray-dark: #d1c7d1;
+    --color-platinum: #eae2e4;
+    --color-desert-sand: #efc6aa;
+    --color-sandy-brown: #f9b17a;
+    --color-champagne: #f7e7ce;
+    --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  }
+
+ .background-stylized-grid {
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0H0V40' fill='none' stroke='%23ffffff' stroke-opacity='0.08' stroke-width='1'/%3E%3C/svg%3E"),
+    linear-gradient(
+      to bottom,
+      var(--color-platinum) 0%,
+      var(--color-frenchgray-light) 0%,
+      var(--color-frenchgray-dark) 0%,
+      var(--color-chinese-violet) 44.71%,
+      var(--color-delft-blue) 67.31%,
+      var(--color-space-cadet) 82.21%,
+      var(--color-oxford-blue) 94.23%
+    );
+
+  background-size: 40px 40px, cover;
+  background-repeat: repeat, no-repeat;
+  background-position: 0 0, center;
+  transition: background-position 0.2s ease;
+}
+
+}
