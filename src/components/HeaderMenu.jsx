@@ -33,7 +33,7 @@ const HeaderMenu = () => {
             </>
           ) : (
             <>
-              <Link to="/">Home</Link>
+              <Link to="/performly-frontend/">Home</Link>
               <Link to="/register">Sign Up</Link>
               <Link to="/signin">Sign In</Link>
             </>

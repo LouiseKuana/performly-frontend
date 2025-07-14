@@ -19,7 +19,7 @@ export default function App() {
       <BackgroundGrid>
         <FloatingMenu />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/performly-frontend/" element={<Home />} />
           <Route path="/signin" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
