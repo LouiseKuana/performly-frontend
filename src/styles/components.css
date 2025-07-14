@@ -24,10 +24,14 @@
     font-family: var(--font-roboto);
   }
   .login-input {
-    @apply w-full p-3 text-[var(--color-chinese-violet)] bg-[var(--color-frenchgray-light)]/40 rounded focus:outline-none 
+    @apply min-w-[332px] w-full p-3 text-[var(--color-chinese-violet)] bg-[var(--color-frenchgray-light)]/40 rounded focus:outline-none 
     focus:border-b-2 
     focus:border-[var(--color-chinese-violet)] 
     transition-colors duration-200;
+  }
+
+  .button-login {
+    @apply mt-2 w-full py-3 bg-[var(--color-oxford-blue)] text-[var(--color-frenchgray-dark)] font-semibold rounded-full hover:bg-[var(--color-chinese-violet)] transition cursor-pointer
   }
   
 }
