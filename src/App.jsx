@@ -1,25 +1,35 @@
 import { Routes, Route } from "react-router-dom";
-import Header from './components/Header';
-import Footer from './components/Footer';
+import "./styles/themes.css";
+import "./styles/components.css";
+
+import PrivateRoute from "./components/PrivateRoute.jsx";
+import HeaderMenu from "./components/HeaderMenu";
+import Footer from "./components/Footer";
 import FloatingMenu from "./components/FloatingMenu";
 import BackgroundGrid from "./components/BackgroundGrid";
-import './styles/themes.css';
-import './styles/components.css';
-
 import Login from "./pages/Login";
-import About from "./pages/About";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
+import Welcome from "./pages/Welcome";
 
 export default function App() {
   return (
     <>
-      <Header />
+      <HeaderMenu />
       <BackgroundGrid>
         <FloatingMenu />
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Login />} />
-          {/* <Route path="/project" element={<Project />} /> */}
-          {/* <Route path="/linkedin" element={<LinkedInRedirect />} /> */}
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/welcome"
+            element={
+              <PrivateRoute>
+                <Welcome />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </BackgroundGrid>
       <Footer />
